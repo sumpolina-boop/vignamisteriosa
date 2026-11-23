@@ -339,7 +339,7 @@ dialog::backdrop{background:rgba(20,35,16,.65)}
     <div class="wrap">
       <p class="label">Support the vineyard</p>
       <h2 class="h2">Choose your <em>seat</em> in the vineyard.</h2>
-      <p class="lead">Every level comes with its own thank-you. Rewards are not cumulative — or give any amount you like.</p>
+      <p class="lead">Every level comes with its own thank-you. Rewards are not cumulative, give any amount you like.</p>
       <div class="tiers" id="tiers"></div>
     </div>
   </section>
@@ -350,7 +350,7 @@ dialog::backdrop{background:rgba(20,35,16,.65)}
       <div>
         <p class="label">Vine dedication</p>
         <h2 class="h2" style="font-size:clamp(2.4rem,1.6rem + 3vw,4.4rem)">Who would you grow a <em>vine</em> for?</h2>
-        <p class="lead">A birthday gift, a thank-you, a way to remember someone — or a promise to come back together. Available with Rooftop Guardian (€300), Terrace Guardian (€500) and Patron (€1,000).</p>
+        <p class="lead">A birthday gift, a thank-you, a way to remember someone or a promise to come back together. Available with Rooftop Guardian (€300), Terrace Guardian (€500) and Patron (€1,000).</p>
         <div class="two" style="margin-top:1.5rem">
           <div class="field"><label for="tryName">Try it: who is it for?</label><input class="input" id="tryName" maxlength="40" placeholder="e.g. Nonna Lucia" style="color:var(--ink)"></div>
           <div class="field"><label for="tryMsg">Short message (optional)</label><input class="input" id="tryMsg" maxlength="60" placeholder="e.g. For every Sunday lunch" style="color:var(--ink)"></div>
@@ -561,7 +561,7 @@ $('#tiers').innerHTML = TIERS.map((t,i) => `
 
 // nameplate
 const plate = (name, msg) => `<img src="${IMAGES.emblem}" alt=""><small>Grown for</small>
-  <strong class="${name.trim()?'':'empty'}">${esc(name.trim() || 'Their name here')}</strong>
+  <strong class="${name.trim()?'':'empty'}">${esc(name.trim() || 'Your name here')}</strong>
   ${msg.trim() ? `<em>“${esc(msg.trim())}”</em>` : ''}<small style="margin-top:.5rem;font-size:.58rem">Vigna Misteriosa</small>`;
 const updateTry = () => { $('#tryPlate').innerHTML = plate($('#tryName').value, $('#tryMsg').value); };
 $('#tryName').addEventListener('input', updateTry); $('#tryMsg').addEventListener('input', updateTry); updateTry();
